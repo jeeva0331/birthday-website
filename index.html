@@ -543,7 +543,7 @@
 
     <footer>
         🌹 Made with love for the most amazing sister in the world 🌹<br>
-        Watch the floating words - each one is a message just for you! | 6 Beautiful Memories
+        Watch the floating words - each one is a message just for you! | 7 Beautiful Memories
     </footer>
 </div>
 
@@ -572,14 +572,15 @@
         "🌹 I Love You POONA🐈💕 🌹",
         "✨ You're So Special ✨",
         "💗 Eruma maadeyyyy 💗",
-        "🌺Sister you are my first fvrt' love 🌺",
-        "💝AKka Thambi🫂💕 💝",
+        "🌺 Sister you are my first fvrt' love 🌺",
+        "💝 AKka Thambi🫂💕 💝",
         "🌟 brother sister bonding 🌟",
         "🌸 GIRIJA😉 🌸",
         "💖 My Sister Is My Everything 💖",
-        "🌹patteyyyy😘 🌹",
-        "✨Thangameyyy💕 ✨"
-    
+        "🌹 patteyyyy😘 🌹",
+        "✨ Thangameyyy💕 ✨",
+        "🎀 My Sweet Sister 🎀",
+        "💕 Forever Love 💕"
     ];
 
     // Function to create floating text
@@ -624,7 +625,8 @@
     }
 
     // ============================================
-    // YOUR PHOTOS - 6 PHOTOS ADDED
+    // YOUR PHOTOS - ALL 7 PHOTOS ADDED (including akkame2.jpeg)
+    // IMPORTANT: Make sure you have an 'images' folder with all these files
     // ============================================
     const memoryData = [
         {
@@ -640,35 +642,41 @@
             hint: "A precious treasure"
         },
         {
+            photo: "images/akkame2.jpeg",
+            title: "🎀 Sweet Memories",
+            message: "Every moment with you is a gift wrapped in love and happiness! You make life beautiful!",
+            hint: "Click to cherish this memory"
+        },
+        {
             photo: "images/akkame3.jpeg",
             title: "✨ Star of Joy",
-            message: "You light up my world like a shining star. So grateful to have you!",
+            message: "You light up my world like a shining star. So grateful to have you in my life!",
             hint: "Your radiant smile"
         },
         {
             photo: "images/akkame4.jpeg",
-            title: "🎀 Sweet Moments",
-            message: "Every moment with you is a gift wrapped in love and happiness!",
-            hint: "Click to cherish"
-        },
-        {
-            photo: "images/akkame5.jpeg",
             title: "💗 Pure Happiness",
-            message: "Your laughter is music to my ears. Thank you for filling my life with joy!",
+            message: "Your laughter is music to my ears. Thank you for filling my life with endless joy!",
             hint: "A happy memory"
         },
         {
-            photo: "images/akkame6.jpeg",
+            photo: "images/akkame5.jpeg",
             title: "🌺 Eternal Bond",
-            message: "Our bond is unbreakable, like a rose that blooms forever. Love you endlessly!",
+            message: "Our bond is unbreakable, like a rose that blooms forever. Love you endlessly, my dear sister!",
             hint: "Forever connected"
+        },
+        {
+            photo: "images/akkame6.jpeg",
+            title: "💝 My Everything",
+            message: "You mean the world to me! Thank you for being my amazing sister and best friend!",
+            hint: "Forever in my heart"
         }
     ];
 
     // Build Flip Cards
     const galleryContainer = document.getElementById('flipGallery');
     
-    memoryData.forEach((item) => {
+    memoryData.forEach((item, index) => {
         const card = document.createElement('div');
         card.className = 'flip-card';
         
@@ -681,7 +689,7 @@
                     <div class="click-hint">✨ Click to flip ✨</div>
                 </div>
                 <div class="flip-card-back">
-                    <img src="${item.photo}" alt="${item.title}" onerror="this.src='https://via.placeholder.com/400x300/ffccd5/c45c7e?text=Add+Photo+in+images+folder'">
+                    <img src="${item.photo}" alt="${item.title}" onerror="this.src='https://via.placeholder.com/400x300/ffccd5/c45c7e?text=Add+Photo+to+images+folder'">
                     <h4>💗 ${item.title}</h4>
                     <p>${item.message}</p>
                 </div>
@@ -730,7 +738,7 @@
     function createSparkle(x, y) {
         for (let i = 0; i < 4; i++) {
             const spark = document.createElement('div');
-            spark.innerHTML = ['🌹', '💖', '✨'][Math.floor(Math.random() * 3)];
+            spark.innerHTML = ['🌹', '💖', '✨', '🌸'][Math.floor(Math.random() * 4)];
             spark.style.position = 'fixed';
             spark.style.left = (x + (Math.random() - 0.5) * 50) + 'px';
             spark.style.top = (y + (Math.random() - 0.5) * 50) + 'px';
@@ -771,7 +779,7 @@
             this.vy = Math.random() * -10 - 3;
             this.gravity = 0.2;
             this.life = 70 + Math.random() * 40;
-            this.icon = ['🌹', '💖', '🌸', '✨'][Math.floor(Math.random() * 4)];
+            this.icon = ['🌹', '💖', '🌸', '✨', '🎀'][Math.floor(Math.random() * 5)];
         }
         update() {
             this.vy += this.gravity;
@@ -839,22 +847,26 @@
         love: [
             "💖 You are the most amazing sister anyone could ask for! I love you endlessly! 💖",
             "💗 My heart is full of gratitude for having you as my sister. You're my everything! 💗",
-            "💝 You make my world brighter just by being in it. Love you so much! 💝"
+            "💝 You make my world brighter just by being in it. Love you so much! 💝",
+            "🌹 Every day with you as my sister is a blessing. I cherish you forever! 🌹"
         ],
         hug: [
             "🤗 Sending you the biggest, warmest virtual hug! You deserve all the love in the world! 🤗",
             "🤗 Wrap yourself in this hug — it's filled with love, warmth, and happiness! 🤗",
-            "🤗 Consider yourself hugged tightly! You're amazing and so loved! 🤗"
+            "🤗 Consider yourself hugged tightly! You're amazing and so loved! 🤗",
+            "🤗 Here's a hug that lasts forever! You mean so much to me! 🤗"
         ],
         wish: [
             "🎁 May your days be filled with endless joy, laughter, and beautiful moments! 🎁",
             "🎂 Wishing you a life as sweet as cake and as bright as candles! 🎂",
-            "✨ May all your dreams come true, today and always! You deserve the world! ✨"
+            "✨ May all your dreams come true, today and always! You deserve the world! ✨",
+            "🎀 Happy Birthday to the best sister ever! May your year be amazing! 🎀"
         ],
         flower: [
             "🌹 Like a rose, you bloom beautifully. May your life be filled with fragrance and joy! 🌹",
             "🌹 Sending you a garden of roses — each one represents a reason why you're special! 🌹",
-            "🌹 You are the most beautiful flower in my garden of life. Stay blessed! 🌹"
+            "🌹 You are the most beautiful flower in my garden of life. Stay blessed! 🌹",
+            "🌸 May your life bloom with happiness, just like flowers in spring! 🌸"
         ]
     };
 
@@ -894,7 +906,8 @@
         "✨ Surprise! You are more precious than any treasure. Love you forever! ✨",
         "🌹 Between us: You make life beautiful just by being in it. Always remember that! 🌹",
         "💗 Secret: You're not just my sister, you're my best friend! 💗",
-        "🌹 My heart beats with joy whenever I think of you. Love you sis! 🌹"
+        "🌹 My heart beats with joy whenever I think of you. Love you sis! 🌹",
+        "🎀 Pssst... You're the best thing that happened to me! 🎀"
     ];
 
     secretBtn.addEventListener('click', () => {
@@ -919,7 +932,7 @@
     // Welcome message
     setTimeout(() => {
         burstMiniConfetti();
-        loveMsgDiv.innerHTML = "🌹 Welcome, beautiful soul! Watch the floating words - they're all for you! Now with 6 precious memories! 🌹";
+        loveMsgDiv.innerHTML = "🌹 Welcome, beautiful soul! Watch the floating words - they're all for you! Now with 7 precious memories! 🌹";
     }, 500);
 </script>
 </body>
